@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love 💝</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Section 1: Cake & Candle -->
+    <section class="section section-cake" id="section1">
+        <div class="cake-container">
+            <div class="cake">
+                <div class="cake-layer cake-bottom"></div>
+                <div class="cake-layer cake-middle"></div>
+                <div class="cake-layer cake-top"></div>
+                <div class="frosting"></div>
+            </div>
+            <div class="candle-holder">
+                <div class="candle">
+                    <div class="flame" id="flame"></div>
+                </div>
+            </div>
+            <div class="plate"></div>
+        </div>
+
+        <div class="instruction-text fade-in">
+            <p>🎂 Make a wish...</p>
+            <p class="small-text">Blow the candle 💨</p>
+        </div>
+
+        <canvas id="confetti-canvas"></canvas>
+    </section>
+
+    <!-- Section 2: Letter -->
+    <section class="section section-letter" id="section2" style="display: none;">
+        <div class="letter-wrapper">
+            <div class="background-images">
+                <div class="image-bg" style="background-image: url('https://via.placeholder.com/400x300?text=Our+Memory+1')"></div>
+                <div class="image-bg" style="background-image: url('https://via.placeholder.com/400x300?text=Our+Memory+2')"></div>
+                <div class="image-bg" style="background-image: url('https://via.placeholder.com/400x300?text=Our+Memory+3')"></div>
+            </div>
+
+            <div class="letter-content">
+                <div class="letter-paper">
+                    <div class="letter-header">
+                        <h2>My Dearest 💌</h2>
+                    </div>
+                    <div class="letter-body" id="letter-text">
+                        <!-- Text will be typed here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-navigation">
+            <button class="next-btn" onclick="nextSection()">Next Gift 💝</button>
+        </div>
+    </section>
+
+    <!-- Section 3: Video -->
+    <section class="section section-video" id="section3" style="display: none;">
+        <div class="video-wrapper">
+            <div class="video-frame">
+                <video id="gift-video" controls>
+                    <source src="your-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p class="video-text">A little something I made for you... 🎬💕</p>
+        </div>
+
+        <div class="section-navigation">
+            <button class="next-btn" onclick="nextSection()">Final Gift 🎁</button>
+        </div>
+    </section>
+
+    <!-- Section 4: Voice Note -->
+    <section class="section section-voice" id="section4" style="display: none;">
+        <div class="voice-container">
+            <div class="voice-visual">
+                <div class="heart-beat">
+                    <svg viewBox="0 0 100 100" class="heart-svg">
+                        <path d="M50,90 Q20,70 20,50 Q20,35 35,35 Q50,35 50,50 Q50,35 65,35 Q80,35 80,50 Q80,70 50,90 Z" fill="currentColor"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="voice-content">
+                <h3>A Message From My Heart 💕</h3>
+                <div class="audio-player">
+                    <button class="play-btn" id="play-btn" onclick="toggleAudio()">
+                        <span class="play-icon">▶</span>
+                    </button>
+                    <audio id="voice-note" src="your-voice-note.mp3"></audio>
+                    <div class="audio-progress">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                </div>
+                <p class="voice-text">Listen to my heart...</p>
+            </div>
+        </div>
+
+        <div class="final-message fade-in">
+            <h2>Happy Birthday My Love 🎉</h2>
+            <p>You mean the world to me...</p>
+            <div class="floating-hearts">
+                <span class="floating-heart">💕</span>
+                <span class="floating-heart">💕</span>
+                <span class="floating-heart">💕</span>
+                <span class="floating-heart">💕</span>
+                <span class="floating-heart">💕</span>
+            </div>
+        </div>
+    </section>
+
+    <audio id="background-music" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
